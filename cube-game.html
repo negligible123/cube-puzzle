@@ -1313,6 +1313,13 @@
             makeLabel('X', new THREE.Vector3(SIZE + 0.5, -0.2, 0), '#ff8888');
             makeLabel('Y', new THREE.Vector3(-0.2, SIZE + 0.5, 0), '#88ff88');
             makeLabel('Z', new THREE.Vector3(-0.2, -0.2, SIZE + 0.5), '#8888ff');
+            const originDiv = document.createElement('div');
+            originDiv.textContent = '(0,0,0)';
+            originDiv.style.fontSize = '11px';
+            originDiv.style.color = '#ccc';
+            const originLabel = new CSS2DObject(originDiv);
+            originLabel.position.set(-0.3, -0.3, -0.3);
+            scene.add(originLabel);
             
             pieces = generateRandomPieces();
             selectedPiece = null;
